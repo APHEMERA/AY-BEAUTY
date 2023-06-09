@@ -348,6 +348,61 @@ body {
   width: 100%;
   margin: 1.5rem 0; }
 
+.currentProduct-skeleton {
+  display: flex;
+  margin: 10rem 0;
+  justify-content: center; }
+  @media only screen and (max-width: 1200px) {
+    .currentProduct-skeleton {
+      flex-direction: column; } }
+
+.currentProduct-mainImage.skeleton {
+  width: 50rem;
+  height: 50rem; }
+
+.swiper-skeleton .currentProduct-gallery-image.skeleton {
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 2rem; }
+
+.id.skeleton {
+  height: 2rem;
+  width: 6rem; }
+
+.currentProduct-info-main .brand.skeleton {
+  display: block;
+  height: 3rem;
+  width: 20rem;
+  margin-bottom: 1rem; }
+
+.currentProduct-info-main .name.skeleton {
+  height: 3rem;
+  width: 50rem; }
+
+.currentProduct-info-main .capacity.skeleton {
+  height: 2rem;
+  width: 4rem;
+  margin-bottom: 0.5rem; }
+
+.currentProduct-info-main .rating-rev.skeleton {
+  height: 2.5rem;
+  width: 7rem; }
+
+.currentProduct-info-footer .description-line {
+  height: 2rem;
+  width: 100%;
+  margin-bottom: 1rem; }
+
+.currentProduct-info-footer .price.skeleton {
+  display: block;
+  height: 5rem;
+  width: 12rem; }
+
+.currentProduct-info-footer .benefit-line.skeleton {
+  height: 1.5rem;
+  width: 100%;
+  margin-bottom: 1rem; }
+
 .header {
   display: flex;
   flex-direction: column;

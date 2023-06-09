@@ -1096,6 +1096,7 @@ const getAPICurrentProduct = async (productId) => {
   }
 };
 const getCurrentProduct = (data1) => {
+  document.querySelector(".currentProductSkl").remove();
   const data = data1.data;
   const dataCurrentProduct = document.querySelector("[data-currentProduct]");
   const dataCurrentProductTemplate = document.querySelector("[data-currentProduct-template]");
@@ -1184,6 +1185,57 @@ const getCurrentProduct = (data1) => {
   });
 };
 
+const skeletonCurrentProduct = () => {
+  const currentProductSkl = document.querySelector(".currentProductSkl");
+  const html = `<div class="currentProduct-skeleton">
+  <div class="currentProduct-images">
+      <div class="currentProduct-mainImage skeleton"></div>
+      <div class="swiper-skeleton">
+          <div class="currentProduct-gallery">
+            <div class="currentProduct-gallery-image skeleton"></div>
+            <div class="currentProduct-gallery-image skeleton"></div>
+            <div class="currentProduct-gallery-image skeleton"></div>
+            <div class="currentProduct-gallery-image skeleton"></div>
+          </div>
+      </div>
+  </div>
+  <div class="currentProduct-info">
+      <div class="currentProduct-info-header">
+          <div class="id skeleton"></div>
+      </div>
+      <div class="currentProduct-info-main">
+              <span class="brand skeleton"></span>
+              <h1 class="name skeleton"></h1>
+              <span class="capacity skeleton"></span>
+              <div class="rating-rev skeleton"></div>
+      </div>
+      <div class="currentProduct-info-footer">
+          <div class="description">
+            <div class="description-line skeleton"></div>
+            <div class="description-line skeleton"></div>
+            <div class="description-line skeleton"></div>
+            <div class="description-line skeleton"></div>
+            <div class="description-line skeleton" style="width:75%"></div>
+          </div>
+          <div class="price-orig-sale">
+              <span class="price skeleton"></span>
+          </div>
+          <div class="benefits">
+            <div class="benefit-line skeleton"></div>
+            <div class="benefit-line skeleton"></div>
+            <div class="benefit-line skeleton"></div>
+            <div class="benefit-line skeleton"></div>
+            <div class="benefit-line skeleton"></div>
+            <div class="benefit-line skeleton"></div>
+            <div class="benefit-line skeleton"></div>
+            <div class="benefit-line skeleton"></div>
+            <div class="benefit-line skeleton" style="width:50%"></div>
+          </div>
+      </div>
+  </div>
+</div>`;
+  currentProductSkl.insertAdjacentHTML("beforeend", html);
+};
 //<<---------------BASKET--------------->>//
 
 const addToBasketPreFunction = (page) => {
@@ -1429,10 +1481,10 @@ const switchFunctionsPerPage = () => {
         sort: sortId,
         ex: extra,
       };
-      //getAPIProducts(slugUrlGlobal, 1, filtersObj);
-      //getAPIPreHeaderProducts(slugUrlGlobal);
+      getAPIProducts(slugUrlGlobal, 1, filtersObj);
+      getAPIPreHeaderProducts(slugUrlGlobal);
       getAPIFilters(slugUrlGlobal);
-      //getAPIFilterCategories();
+      getAPIFilterCategories();
       skeletonNavAside();
       getProductsSteps();
       skeletonProduct(false);
@@ -1445,6 +1497,7 @@ const switchFunctionsPerPage = () => {
       let productUrl = params1.get("product");
       let productId = getCurrentProductUrlId(productUrl);
       getAPICurrentProduct(productId);
+      skeletonCurrentProduct();
       break;
     case "basket":
       updateBasketWithLocalStorageItems("basket");
