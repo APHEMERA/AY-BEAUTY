@@ -1,0 +1,14 @@
+.main__products-preHeader-item-skeleton {
+  padding: 1rem;
+}
+.main__products-preHeader-item-image.skeleton {
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+.main__products-preHeader-item-info-name.skeleton {
+  height: 1rem;
+}
+.main__products-preHeader-item-info-name.skeleton:not(:first-child) {
+  margin-top: 0.5rem;
+}

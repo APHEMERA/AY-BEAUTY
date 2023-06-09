@@ -1,0 +1,22 @@
+.header-nav-item-skeleton {
+  height: 2.3rem;
+  width: 11rem;
+  animation: skeletonAnimation 1s linear infinite;
+  margin: 0 1rem;
+  border-radius: 1rem;
+  @media only screen and (max-width: 1000px) {
+    margin: 0.5rem 0;
+    width: 15rem;
+  }
+}
+@keyframes skeletonAnimation {
+  0% {
+    background-color: $color-grey-light-2;
+  }
+  50% {
+    background-color: $color-grey-light;
+  }
+  100% {
+    background-color: $color-grey-light-2;
+  }
+}

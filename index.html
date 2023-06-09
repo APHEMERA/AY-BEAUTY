@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/resources/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <script src="/resources/js/script.js" defer></script>
+    <title>AY BEAUTY</title>
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }.swiper-wrapper .product-item-skeleton{
+        margin: 0 1rem;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #fff !important;
+        background-color: #0b090a !important;
+        padding: 2.5rem !important;
+        transition: background-color 0.2s ease-out !important;
+      }
+      .swiper-button-next::after,
+      .swiper-button-prev::after{
+        font-size: 2rem !important;
+      }
+      .swiper-button-prev {
+        left: 0 !important;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+      .swiper-button-next {
+        right: 0 !important;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+      }
+      .swiper-button-next:active,
+      .swiper-button-prev:active{
+        background-color: #b1a7a6 !important;
+      }
+    </style>
+  </head>
+  <body id="index">
+    <header class="header">
+      <div class="header-main">
+        <div class="header-main-search">
+          <label for="header-search"></label>
+          <ion-icon name="search-outline"></ion-icon>
+          <input
+            type="text"
+            class="header-search-input"
+            id="header-search"
+            name="header-search"
+            placeholder="What product are you looking for?"
+          />
+          <ion-icon name="close-circle-outline" class="search-clearInput-icon"></ion-icon>
+          <div class="header-main-search-container" data-header-main-search-container>
+            <template data-search-item-template>
+              <a href="#">
+                <div class="header-main-search-item">
+                  <div class="header-main-search-item-image">
+                    <img src="" alt="" data-search-item-image />
+                  </div>
+                  <div class="header-main-search-item-info">
+                    <div class="search-item-info-header">
+                      <span class="search-item-info-header-name" data-search-item-name></span>
+                      <div class="search-item-info-header-capacity">
+                        <ion-icon name="water-outline"></ion-icon
+                        ><span class="capacity" data-search-item-capacity></span>
+                      </div>
+                      <div class="search-item-info-header-promo" data-search-item-promo>New Arrival</div>
+                    </div>
+                    <div class="search-item-info-middle">
+                      <div class="search-item-info-middle-rating">
+                        <ion-icon name="star-half-outline"></ion-icon>
+                        <span class="rating" data-search-item-rating></span>
+                        <span class="revies-count" data-search-item-reviews></span>
+                      </div>
+                    </div>
+                    <div class="search-item-info-footer">
+                      <span class="search-item-info-footer-original-price" data-search-item-originalPrice></span>
+                      <span class="search-item-info-footer-current-price" data-search-item-price><sup></sup></span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </template>
+          </div>
+        </div>
+        <div class="header-main-logo"><a href="index.html">AY BEAUTY.</a></div>
+        <div class="header-main-rightside">
+          <div class="header-main-rightside-login">
+            <ion-icon name="person-outline"></ion-icon>
+            <span>Account</span>
+          </div>
+          <div class="header-main-rightside-wishlist">
+            <ion-icon name="heart-outline"></ion-icon>
+          </div>
+          <div class="header-main-rightside-basket">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+          </div>
+          <div class="header-main-rightside-basket-dropdown">
+            <div class="dropdown-header">
+              <span>Basket</span>
+            </div>
+            <div class="dropdown-main" data-dropdown-main-container>
+              <template data-dropdown-main-item-template>
+                <div class="dropdown-main-item" data-id>
+                  <div class="dropdown-main-item-image">
+                    <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_194249402715-Drunk-Elephant-A-Shaba-Complex--Eye-Serum-15ml-New_f0bdd95a1aa6e02c95304fb15860c67286894029_1681978695.png" alt="" data-dropdown-main-image>
+                  </div>
+                  <div class="dropdown-main-item-info">
+                    <a href="#">
+                      <strong class="dropdown-main-item-info-brand" data-dropdown-main-brand></strong>
+                      <div class="dropdown-main-item-info-name" data-dropdown-main-name></div>
+                    </a>
+                    <div class="dropdown-main-item-info-footer">
+                      <div class="dropdown-main-item-info-moveTo">Move to wishlist</div>
+                      <div class="dropdown-main-item-info-remove">Remove</div>
+                    </div>
+                  </div>
+                  <div class="dropdown-main-item-price">
+                    <span data-dropdown-main-price></span>
+                  </div>
+                </div>
+              </template>
+            </div>
+            <div class="dropdown-footer">
+              <div class="dropdown-footer-total">
+                <div>Total: <span class="total-item">(0 items)</span></div>
+                <span class="total-price">$0.00</span>
+              </div>
+              <div class="dropdown-footer-button">
+                <button class="btn">View basket & Checkout</button>
+              </div>
+            </div>
+            <div class="dropdown-bottom-moreInfo">
+              <div class="moreInfo-item">
+                <ion-icon name="car-outline"></ion-icon>
+                <span>Beauty Insiders enjoy <b>FREE standard shipping</b> on all orders.</span>
+              </div>
+              <div class="moreInfo-item">
+                <ion-icon name="card-outline"></ion-icon>
+                <div>
+                  <b>The AY BEAUTY Credit Card Program</b>
+                  <span>Save $10.00 on this order when you open and use either AY BEAUTY Credit Card today</span>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-navigation">
+        <div class="showHide-nav"><ion-icon name="menu-outline"></ion-icon></div>
+        <nav class="header-nav">
+          <ul class="header-nav-list" data-header-nav-list>
+            <template data-header-nav-list-template>
+              <li class="header-nav-item" data-header-nav-item data-id>
+                <a href="#" data-header-nav-item-aLink data-id></a>
+              </li>
+            </template>
+          </ul>
+        </nav>
+        <div class="nav-flyout-menu" data-nav-flyout-menu>
+          <template data-nav-flyout-item-template>
+            <div class="nav-flyout-item" data-nav-flyout-item data-id>
+              <div class="nav-flyout-item-header" data-nav-flyout-item-header>
+                <a href="#" class="nav-flyout-item-header-link" data-nav-flyout-item-header-link></a>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </div>
+              <div class="nav-flyout-item-links" data-nav-flyout-item-links>
+                <a href="#" class="nav-flyout-item-link" data-nav-flyout-item-link></a>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </header>
+    <main class="main__index">
+      <div class="image-banner-carousel">
+        <div class="image-banner-carousel-container">
+          <button class="btn image-banner-carousel-button prev" data-carousel-button="prev">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+          <button class="btn image-banner-carousel-button next" data-carousel-button="next">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
+          <ul class="image-banner-carousel-list">
+            <li class="image-banner-carousel-item" data-active>
+              <div class="image-banner-carousel-item-info-left">
+                <h1>AY BEAUTY, your best choise!</h1>
+                <p>We believe that beauty thrives in diversity and discovery</p>
+              </div>
+              <img src="resources/img/banner-1.jpg" alt="banner-1" />
+            </li>
+            <li class="image-banner-carousel-item">
+              <div class="image-banner-carousel-item-info-right">
+                <h2>
+                  Our purpose is to expand the way the world sees beauty by empowering the <span>ExtraOrdinary</span> in
+                  each of us.
+                </h2>
+              </div>
+              <img src="resources/img/banner-2.jpg" alt="banner-2" />
+            </li>
+            <li class="image-banner-carousel-item">
+              <img src="resources/img/banner-3.jpg" alt="banner-3" />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <section class="swiper homepage-product-section">
+        <span class="homepage-product-category">Bestsellers</span>
+        <div class="swiper-wrapper product-list" data-bestsellers-product-list>
+          <template data-bestsellers-product-item-template>
+            <div class="swiper-slide product-item" data-bestsellers-product-item>
+              <a href="#">
+              <div class="product-item-header">
+                ID: <span class="product-item-header-id" data-bestsellers-product-item-id></span>
+              </div>
+              <div class="product-item-image">
+                <img src="" alt="" data-bestsellers-product-item-image />
+              </div>
+
+              <div class="product-item-info">
+                <span class="product-item-info-promo-bs">Bestsellers</span>
+                <div class="product-item-info-header">
+                  <span class="name" data-bestsellers-product-item-name></span>
+                  <div class="product-item-info-header-capacity">
+                    <ion-icon name="water-outline"></ion-icon
+                    ><span class="capacity" data-bestsellers-product-item-capacity></span>
+                  </div>
+                </div>
+                <div class="product-item-info-middle">
+                  <div class="product-item-info-middle-rating">
+                    <ion-icon name="star-half-outline"></ion-icon>
+                    <span class="rating" data-bestsellers-product-item-rating></span>
+                    <span class="revies-count" data-bestsellers-product-revies></span>
+                  </div>
+                  <div class="product-item-info-middle-price">
+                    <span class="current-price" data-bestsellers-product-item-originalPrice></span>
+                    <span class="original-price"><sup data-bestsellers-product-item-price></sup></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item-footer">
+                <button class="btn product-item-footer-basket-button"><p>add to basket</p></button>
+                <button class="btn product-item-footer-wishlist-button">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </button>
+              </div>
+              </a>
+            </div>
+          </template>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </section>
+      <section class="swiper homepage-product-section">
+        <span class="homepage-product-category">New Arrival</span>
+        <div class="swiper-wrapper product-list" data-newArrivals-product-list>
+          <template data-newArrivals-product-item-template>
+            <div class="swiper-slide product-item" data-newArrivals-product-item>
+              <a href="#">
+              <div class="product-item-header">
+                ID: <span class="product-item-header-id" data-newArrivals-product-item-id></span>
+              </div>
+              <div class="product-item-image">
+                <img src="" alt="" data-newArrivals-product-item-image />
+              </div>
+              <div class="product-item-info">
+                <span class="product-item-info-promo-na">New arrival</span>
+                <div class="product-item-info-header">
+                  <span class="name" data-newArrivals-product-item-name></span>
+                  <div class="product-item-info-header-capacity">
+                    <ion-icon name="water-outline"></ion-icon
+                    ><span class="capacity" data-newArrivals-product-item-capacity></span>
+                  </div>
+                </div>
+                <div class="product-item-info-middle">
+                  <div class="product-item-info-middle-rating">
+                    <ion-icon name="star-half-outline"></ion-icon>
+                    <span class="rating" data-newArrivals-product-item-rating></span>
+                    <span class="revies-count" data-newArrivals-product-revies></span>
+                  </div>
+                  <div class="product-item-info-middle-price">
+                    <span class="current-price" data-newArrivals-product-item-originalPrice></span>
+                    <span class="original-price"><sup data-newArrivals-product-item-price></sup></span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-item-footer">
+                <button class="btn product-item-footer-basket-button"><p>add to basket</p></button>
+                <button class="btn product-item-footer-wishlist-button">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </button>
+              </div>
+            </a>
+            </div>
+          </template>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </section>
+      <div class="mini-banners">
+        <button class="mini-banners-btn prev"><ion-icon name="chevron-back-outline"></ion-icon></button>
+        <button class="mini-banners-btn next"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+        <div class="mini-banners-container">
+          <div class="mini-banner">
+            <img src="resources/img/mini-banners/mini-banner-1.png" alt="">
+            <div class="mini-banner-info one">
+              <a href="#">
+                <h2 class="mini-banner-info-header">Bestselling Beauty</h2>
+                <p class="mini-banner-info-paragraph">These fan-favorites are worth the hype.</p>
+                <div class="mini-banner-info-footer">
+                  <p>SHOP NOW</p>
+                  <ion-icon name="caret-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="mini-banner">
+            <img src="resources/img/mini-banners/mini-banner-2.png" alt="">
+            <div class="mini-banner-info two">
+              <a href="#">
+                <h2 class="mini-banner-info-header">Top-Rated Concealers</h2>
+                <p class="mini-banner-info-paragraph">Meet the perfect match for your skin type.</p>
+                <div class="mini-banner-info-footer">
+                  <p>SHOP NOW</p>
+                  <ion-icon name="caret-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="mini-banner">
+            <img src="resources/img/mini-banners/mini-banner-3.png" alt="">
+            <div class="mini-banner-info three">
+              <a href="#">
+                <h2 class="mini-banner-info-header">The Latest Lineup</h2>
+                <p class="mini-banner-info-paragraph">New beauty from the hottest brands. </p>
+                <div class="mini-banner-info-footer">
+                  <p>SHOP NOW</p>
+                  <ion-icon name="caret-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="mini-banner">
+            <img src="resources/img/mini-banners/mini-banner-4.png" alt="">
+            <div class="mini-banner-info four">
+              <a href="#">
+                <h2 class="mini-banner-info-header">Just In from Drunk Elephant</h2>
+                <p class="mini-banner-info-paragraph">NEW Protini Cream and Lala Retro Refil Pods for more product and less packaging waste. Refill pods only at Sephora.</p>
+                <div class="mini-banner-info-footer">
+                  <p>SHOP NOW</p>
+                  <ion-icon name="caret-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="mini-banner">
+            <img src="resources/img/mini-banners/mini-banner-5.png" alt="">
+            <div class="mini-banner-info five">
+              <a href="#">
+                <h2 class="mini-banner-info-header">Great Shampoo Is a Game Changer</h2>
+                <p class="mini-banner-info-paragraph">What your hair needs for buildup, color care, and dryness.</p>
+                <div class="mini-banner-info-footer">
+                  <p>SHOP NOW</p>
+                  <ion-icon name="caret-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="mini-banner">
+            <img src="resources/img/mini-banners/mini-banner-6.png" alt="">
+            <div class="mini-banner-info six">
+              <a href="#">
+                <h2 class="mini-banner-info-header">New Tatcha: The Silk Serum</h2>
+                <p class="mini-banner-info-paragraph">This wrinkle-fighting retinol alternative visibly firms skin and helps calm redness. Only at Sephora.</p>
+                <div class="mini-banner-info-footer">
+                  <p>SHOP NOW</p>
+                  <ion-icon name="caret-forward-outline"></ion-icon>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-links-container">
+        <ul class="footer-links-list">
+          <li class="footer-links-heading">CUSTOMER SERVICE</li>
+        </br>
+          <li class="footer-links-link"><a href="#">FAQ - Frequently Asked Questions</a></li>
+          <li class="footer-links-link"><a href="#">Returns and complaints</a></li>
+          <li class="footer-links-link"><a href="#">Delivery</a></li>
+          <li class="footer-links-link"><a href="#">Payment methods</a></li>
+          <li class="footer-links-link"><a href="#">Contact</a></li>
+        </ul>
+        <ul class="footer-links-list">
+          <li class="footer-links-heading">PURCHASES AND PROMOTIONS</li>
+        </br>
+          <li class="footer-links-link"><a href="#">Promotional offers</a></li>
+          <li class="footer-links-link"><a href="#">AY BEAUTY Club</a></li>
+          <li class="footer-links-link"><a href="#">Brands excluded from promotions Contests</a></li>
+        </ul>
+        <ul class="footer-links-list">
+          <li class="footer-links-heading">RULES</li>
+        </br>
+          <li class="footer-links-link"><a href="#">General conditions of use of ay-beauty.com</a></li>
+          <li class="footer-links-link"><a href="#">General Terms and Conditions of Sales</a></li>
+          <li class="footer-links-link"><a href="#">Privacy & Cookies Policy</a></li>
+          <li class="footer-links-link"><a href="#">Cookie settings</a></li>
+          <li class="footer-links-link"><a href="#">Online consultation</a></li>
+          <li class="footer-links-link"><a href="#">All terms and conditions</a></li>
+        </ul>
+        <ul class="footer-links-list">
+          <li class="footer-links-heading">About AY BEAUTY</li>
+        </br>
+          <li class="footer-links-link"><a href="#">About AY BEAUTY</a></li>
+          <li class="footer-links-link"><a href="#">Our commitment</a></li>
+          <li class="footer-links-link"><a href="#">Our vision of beauty</a></li>
+          <li class="footer-links-link"><a href="#">Career</a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright-social">
+        <p class="footer-copyright">Copyright 2023 &copy; AY BEAUTY</p>
+        <ul class="footer-social-links">
+          <li class="footer-social-link"><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li class="footer-social-link"><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li class="footer-social-link"><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        </ul>
+      </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 6,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          440: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          700: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1050: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          1300: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+          },
+          1700: {
+            slidesPerView: 6,
+            spaceBetween: 30,
+          },
+          2200: {
+            slidesPerView: 7,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

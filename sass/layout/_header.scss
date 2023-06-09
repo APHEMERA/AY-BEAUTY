@@ -1,0 +1,221 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  align-self: center;
+  background-color: #fff;
+  z-index: 10;
+  padding: 0 6rem;
+  &-main {
+    display: flex;
+    padding: 1rem 3rem;
+    background-color: #fff;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    max-width: 1280px;
+
+    &-logo {
+      flex-grow: 1;
+      flex-basis: 33.33333%;
+      text-align: center;
+      & a {
+        font-weight: 800;
+        font-size: 3.5rem;
+        text-decoration: none;
+        color: $color-black;
+        letter-spacing: 1rem;
+        white-space: nowrap;
+        @media only screen and (max-width: 800px) {
+          font-size: 2rem;
+        }
+      }
+    }
+    &-rightside {
+      flex-basis: 33.33333%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2rem;
+      position: relative;
+      @media only screen and (max-width: 700px) {
+        gap: 1rem;
+      }
+      &-login:hover,
+      &-wishlist:hover,
+      &-basket:hover {
+        color: $color-red-light;
+      }
+      &-login {
+        display: flex;
+        align-items: center;
+        margin-right: 3rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        @media only screen and (max-width: 700px) {
+          margin: 0;
+        }
+        & span {
+          @media only screen and (max-width: 700px) {
+            display: none;
+          }
+        }
+        & ion-icon {
+          font-size: 3rem;
+        }
+      }
+      &-wishlist {
+        cursor: pointer;
+        & ion-icon {
+          font-size: 3rem;
+        }
+      }
+      &-basket {
+        cursor: pointer;
+        & ion-icon {
+          font-size: 3rem;
+        }
+      }
+      &-basket-dropdown {
+        display: none;
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        top: 6rem;
+        left: 0;
+        z-index: 5;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0px 5px 26px -17px $color-black;
+        @media only screen and (max-width: 900px) {
+          min-width: 25rem;
+        }
+        @media only screen and (max-width: 700px) {
+          left: -10rem;
+        }
+        @media only screen and (max-width: 550px) {
+          left: -15rem;
+        }
+        .dropdown-header {
+          font-size: 1.5rem;
+          font-weight: 600;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid $color-grey-light;
+          letter-spacing: 1px;
+        }
+        .dropdown-main {
+          border-bottom: 1px solid $color-grey-light;
+          max-height: 20.6rem;
+          overflow: auto;
+          &-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 0;
+            &-image img {
+              width: 7rem;
+            }
+            &-info {
+              display: flex;
+              flex-direction: column;
+              justify-self: flex-end;
+              margin: auto 1rem;
+              width: 100%;
+              & > a {
+                color: $color-black;
+                text-decoration: none;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+              &-brand {
+                font-size: 1.1rem;
+              }
+              &-name {
+                font-size: 1.3rem;
+              }
+              &-footer {
+                display: flex;
+                margin-top: 1rem;
+                justify-content: space-between;
+                font-size: 1.1rem;
+              }
+              &-moveTo {
+                color: $color-red-dark-2;
+                cursor: pointer;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+              &-remove {
+                color: $color-black-light;
+                cursor: pointer;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+            &-price {
+              font-size: 1.3rem;
+              font-weight: 600;
+            }
+          }
+        }
+        .dropdown-footer {
+          padding-bottom: 1rem;
+          margin-top: 1rem;
+          border-bottom: 1px solid $color-grey-light;
+          &-total {
+            display: flex;
+            justify-content: space-between;
+            div {
+              font-size: 1.5rem;
+              font-weight: 600;
+              letter-spacing: 1px;
+            }
+            .total-item {
+              font-weight: 400;
+              letter-spacing: 0px;
+            }
+            .total-price {
+              font-size: 1.5rem;
+              font-weight: 600;
+            }
+          }
+          &-button {
+            margin-top: 1rem;
+            button {
+              width: 100%;
+              background-color: $color-red-light;
+              color: #fff;
+              padding: 1.2rem;
+              border-radius: 2rem;
+              font-weight: 600;
+            }
+          }
+        }
+        .dropdown-bottom-moreInfo {
+          .moreInfo-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid $color-grey-light;
+            ion-icon {
+              font-size: 1.8rem;
+              margin-right: 1rem;
+            }
+            span {
+              font-size: 1.2rem;
+              font-weight: 400;
+            }
+            div > b {
+              display: block;
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

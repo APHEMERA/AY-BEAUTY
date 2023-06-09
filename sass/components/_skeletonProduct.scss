@@ -1,0 +1,47 @@
+.product-item-skeleton {
+  display: flex;
+  flex-direction: column;
+  border: none !important;
+  height: 100%;
+}
+.product-item-header-id.skeleton {
+  display: inline-block;
+  height: 1rem;
+  width: 4rem;
+}
+.product-item-image.skeleton {
+  display: block;
+  height: 24.4rem;
+  width: 24.4rem;
+  align-self: center;
+}
+.product-item-info-promo-na.skeleton {
+  height: 2rem;
+  width: 6rem;
+  border: none;
+  margin-bottom: 1rem;
+}
+.name.skeleton {
+  height: 2rem;
+  margin-bottom: 0.5rem;
+}
+.capacity.skeleton {
+  display: inline-block;
+  height: 1.5rem;
+  width: 4rem;
+  margin-top: 1rem;
+}
+.rating.skeleton {
+  height: 1.2rem;
+  width: 2rem;
+}
+.revies-count.skeleton {
+  display: inline-block;
+  height: 1.2rem;
+  width: 3rem;
+}
+.original-price.skeleton {
+  display: inline-block;
+  height: 2.5rem;
+  width: 8rem;
+}

@@ -1,0 +1,91 @@
+.mini-banners {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-top: 5rem;
+  &-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    outline: none;
+    border: none;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10rem;
+    font-size: 2.5rem;
+    align-self: center;
+    background-color: $color-black;
+    color: #fff;
+    cursor: pointer;
+  }
+  &-btn.prev {
+    left: 0;
+  }
+  &-btn.next {
+    right: 0;
+  }
+  &-container {
+    display: flex;
+    gap: 2rem;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    .mini-banner {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 35rem;
+      img {
+        max-width: 35rem;
+        object-fit: cover;
+        flex-grow: 1;
+      }
+      &-info {
+        padding: 1rem;
+        & a {
+          text-decoration: none;
+          color: currentColor;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        &-header {
+          margin-bottom: 1rem;
+          letter-spacing: 1px;
+        }
+        &-paragraph {
+          font-size: 1.1rem;
+        }
+        &-footer {
+          display: flex;
+          align-items: center;
+          margin-top: 1rem;
+          p {
+            font-size: 1.3rem;
+          }
+          ion-icon {
+            font-size: 1.2rem;
+          }
+        }
+      }
+      &-info.one {
+        background-color: #d47e43;
+      }
+      &-info.two {
+        background-color: #83c3c5;
+      }
+      &-info.three {
+        background-color: #ffb9ad;
+      }
+      &-info.four {
+        background-color: #88ecfb;
+      }
+      &-info.five {
+        background-color: #ffbcad;
+      }
+      &-info.six {
+        background-color: #9893a7;
+      }
+    }
+  }
+}

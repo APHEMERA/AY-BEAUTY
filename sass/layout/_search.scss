@@ -1,0 +1,104 @@
+.header-main-search {
+  flex-basis: 33.33333%;
+  display: flex;
+  position: relative;
+  & input {
+    outline: none;
+    border: 1px solid $color-black;
+    border-radius: 2rem;
+    padding: 1rem 3.5rem;
+    width: 100%;
+    color: #2b2d42;
+    font-weight: 600;
+  }
+  & ion-icon[name="search-outline"] {
+    align-self: center;
+    font-size: 2.5rem;
+    color: $color-black;
+    transform: translateX(3rem);
+  }
+  & ion-icon[name="close-circle-outline"] {
+    align-self: center;
+    font-size: 2.5rem;
+    color: $color-black;
+    transform: translateX(-3rem);
+    cursor: pointer;
+    &:hover {
+      color: $color-grey-dark;
+    }
+  }
+  &-container {
+    display: none;
+    overflow-y: scroll;
+    width: 100vh;
+    top: 5.15rem;
+    max-height: 50vh;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid $color-black;
+    z-index: 3;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    & a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    transition: background-color 0.2s ease-out;
+    &:hover {
+      background-color: $color-grey-light-2;
+    }
+    &-image img {
+      width: 6rem;
+    }
+    &-info {
+      margin-left: 1rem;
+      .search-item-info-header {
+        display: flex;
+        &-promo {
+          display: flex;
+          align-items: center;
+          padding: 0.5rem;
+          border: 1px solid $color-red-dark;
+          color: $color-red-dark;
+          margin-left: 1rem;
+        }
+        &-name {
+          font-size: 1.5rem;
+          color: $color-black;
+        }
+        &-capacity {
+          margin-left: 1rem;
+          display: flex;
+          align-items: center;
+          color: $color-grey-dark;
+        }
+      }
+      .search-item-info-middle {
+        &-rating {
+          display: flex;
+          align-items: center;
+          .rating {
+            margin-right: 0.5rem;
+          }
+          .reviews-count {
+            color: $color-black-light;
+          }
+        }
+      }
+      .search-item-info-footer {
+        font-size: 1.2rem;
+        &-original-price {
+          color: $color-red-light;
+        }
+        &-current-price {
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}

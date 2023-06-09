@@ -1,0 +1,25 @@
+.products-header {
+  padding: 2rem 3rem;
+  &-steps {
+    display: flex;
+    align-items: center;
+  }
+  &-step {
+    & a {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-black;
+      display: flex;
+      align-items: center;
+      &:hover {
+        color: $color-grey-dark;
+      }
+    }
+
+    & ion-icon {
+      margin: 0 1rem;
+      font-size: 1.4rem;
+    }
+  }
+}

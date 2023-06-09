@@ -1,0 +1,42 @@
+.header-main-search-item-skeleton {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.skeleton {
+  border-radius: 1rem;
+  animation: skeletonAnimation 1s linear infinite;
+}
+.search-item-info-header-name.skeleton {
+  width: 25rem;
+  height: 1rem;
+  margin: 0.5rem 0;
+}
+.search-item-info-middle-rating {
+  .rating.skeleton {
+    width: 4rem;
+    height: 0.8rem;
+  }
+  .revies-count.skeleton {
+    width: 6rem;
+    height: 0.8rem;
+  }
+}
+.search-item-info-footer-original-price.skeleton {
+  display: block;
+  width: 5rem;
+  height: 1rem;
+  margin: 0.7rem 0;
+}
+
+@keyframes skeletonAnimation {
+  0% {
+    background-color: $color-grey-light-2;
+  }
+  50% {
+    background-color: $color-grey-light;
+  }
+  100% {
+    background-color: $color-grey-light-2;
+  }
+}

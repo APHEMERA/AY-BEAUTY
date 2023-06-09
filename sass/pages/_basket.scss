@@ -1,0 +1,192 @@
+.main__basket {
+  margin: 15rem 6rem 6rem 6rem;
+  max-width: 1280px;
+  align-self: center;
+  display: grid;
+  column-gap: 4rem;
+  @media only screen and (max-width: 1000px) {
+    margin-top: 40rem;
+  }
+  &-header {
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    .header-promo {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      border: 1px solid $color-grey-light;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 1rem;
+      &-text > b {
+        display: block;
+      }
+      & ion-icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+    }
+    & > span {
+      display: block;
+      font-size: 2rem;
+      font-weight: 600;
+      padding: 2rem 0;
+      letter-spacing: 1px;
+    }
+  }
+  &-basket {
+    width: 100%;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    .basket-header {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .basket-main {
+      &-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 0;
+        &-image img {
+          width: 10rem;
+        }
+        &-info {
+          display: flex;
+          flex-direction: column;
+          justify-self: flex-end;
+          margin: auto 1rem;
+          width: 100%;
+          & > a {
+            color: $color-black;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          &-brand {
+            font-size: 1.3rem;
+          }
+          &-name {
+            font-size: 1.5rem;
+          }
+          &-footer {
+            display: flex;
+            margin-top: 1rem;
+            justify-content: space-between;
+            font-size: 1.1rem;
+          }
+          &-moveTo {
+            color: $color-red-dark-2;
+            font-size: 1.2rem;
+            cursor: pointer;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          &-remove {
+            color: $color-black-light;
+            font-size: 1.2rem;
+            cursor: pointer;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        &-price {
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  &-aside {
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    @media only screen and (max-width: 700px) {
+      grid-column: 1 / 3;
+      grid-row: 3/ 4;
+    }
+    .basket-summary {
+      border: 1px solid $color-grey-light;
+      border-radius: 1rem;
+      padding: 2rem;
+      .summary-header {
+        border-bottom: 1px solid $color-grey-light;
+        &-item {
+          display: flex;
+          justify-content: space-between;
+          font-size: 1.4rem;
+          margin: 0.5rem 0;
+          &-price {
+            font-weight: 600;
+          }
+        }
+      }
+      .summary-footer {
+        margin-top: 1rem;
+        .footer-total {
+          &-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.6rem;
+            font-weight: 600;
+          }
+        }
+        .footer-btns {
+          margin-top: 1rem;
+          .main-btn {
+            display: block;
+            width: 100%;
+            font-size: 1.4rem;
+            padding: 1rem 5rem;
+            border-radius: 5rem;
+            outline: none;
+            border: none;
+            background-color: $color-red-light;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+          }
+          .paypal-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            outline: none;
+            border: 2px solid $color-black;
+            border-radius: 5rem;
+            margin-top: 1rem;
+            padding: 1rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            cursor: pointer;
+            span {
+              display: inline-block;
+              margin-right: 1rem;
+            }
+            img {
+              width: 6rem;
+            }
+          }
+        }
+      }
+    }
+    .basket-promo {
+      margin-top: 2rem;
+      border: 1px solid $color-grey-light;
+      border-radius: 1rem;
+      padding: 1rem;
+      input {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid $color-grey-light;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.productsLayout {
+  display: grid;
+  grid-template-columns: 22rem 1fr;
+  grid-template-rows: repeat(2, min-content);
+  margin-top: 11rem;
+  max-width: 2560px;
+  width: 100%;
+  align-self: center;
+  @media only screen and (max-width: 1000px) {
+    margin-top: 40rem;
+  }
+}
+.products-header {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+.aside {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  @media only screen and (max-width: 800px) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+}
+.main__products {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  @media only screen and (max-width: 800px) {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+  }
+}

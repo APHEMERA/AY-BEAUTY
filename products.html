@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/resources/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <script src="/resources/js/script.js" defer></script>
+    <title>AY BEAUTY</title>
+  </head>
+  <body id="products">
+    <header class="header">
+      <div class="header-main">
+        <div class="header-main-search">
+          <label for="header-search"></label>
+          <ion-icon name="search-outline"></ion-icon>
+          <input
+            type="text"
+            class="header-search-input"
+            id="header-search"
+            name="header-search"
+            placeholder="What product are you looking for?"
+          />
+          <ion-icon name="close-circle-outline" class="search-clearInput-icon"></ion-icon>
+          <div class="header-main-search-container" data-header-main-search-container>
+            <template data-search-item-template>
+              <a href="#">
+                <div class="header-main-search-item">
+                  <div class="header-main-search-item-image">
+                    <img src="" alt="" data-search-item-image />
+                  </div>
+                  <div class="header-main-search-item-info">
+                    <div class="search-item-info-header">
+                      <span class="search-item-info-header-name" data-search-item-name></span>
+                      <div class="search-item-info-header-capacity">
+                        <ion-icon name="water-outline"></ion-icon
+                        ><span class="capacity" data-search-item-capacity></span>
+                      </div>
+                      <div class="search-item-info-header-promo" data-search-item-promo>New Arrival</div>
+                    </div>
+                    <div class="search-item-info-middle">
+                      <div class="search-item-info-middle-rating">
+                        <ion-icon name="star-half-outline"></ion-icon>
+                        <span class="rating" data-search-item-rating></span>
+                        <span class="revies-count" data-search-item-reviews></span>
+                      </div>
+                    </div>
+                    <div class="search-item-info-footer">
+                      <span class="search-item-info-footer-original-price" data-search-item-originalPrice></span>
+                      <span class="search-item-info-footer-current-price" data-search-item-price><sup></sup></span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </template>
+          </div>
+        </div>
+        <div class="header-main-logo"><a href="index.html">AY BEAUTY.</a></div>
+        <div class="header-main-rightside">
+          <div class="header-main-rightside-login">
+            <ion-icon name="person-outline"></ion-icon>
+            <span>Account</span>
+          </div>
+          <div class="header-main-rightside-wishlist">
+            <ion-icon name="heart-outline"></ion-icon>
+          </div>
+          <div class="header-main-rightside-basket">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+          </div>
+          <div class="header-main-rightside-basket-dropdown">
+            <div class="dropdown-header">
+              <span>Basket</span>
+            </div>
+            <div class="dropdown-main" data-dropdown-main-container>
+              <template data-dropdown-main-item-template>
+                <div class="dropdown-main-item" data-id>
+                  <div class="dropdown-main-item-image">
+                    <img src="https://image-optimizer-reg.production.sephora-asia.net/images/product_images/closeup_1_Product_194249402715-Drunk-Elephant-A-Shaba-Complex--Eye-Serum-15ml-New_f0bdd95a1aa6e02c95304fb15860c67286894029_1681978695.png" alt="" data-dropdown-main-image>
+                  </div>
+                  <div class="dropdown-main-item-info">
+                    <a href="#">
+                      <strong class="dropdown-main-item-info-brand" data-dropdown-main-brand></strong>
+                      <div class="dropdown-main-item-info-name" data-dropdown-main-name></div>
+                    </a>
+                    <div class="dropdown-main-item-info-footer">
+                      <div class="dropdown-main-item-info-moveTo">Move to wishlist</div>
+                      <div class="dropdown-main-item-info-remove">Remove</div>
+                    </div>
+                  </div>
+                  <div class="dropdown-main-item-price">
+                    <span data-dropdown-main-price></span>
+                  </div>
+                </div>
+              </template>
+            </div>
+            <div class="dropdown-footer">
+              <div class="dropdown-footer-total">
+                <div>Total: <span class="total-item">(0 items)</span></div>
+                <span class="total-price">$0.00</span>
+              </div>
+              <div class="dropdown-footer-button">
+                <button class="btn">View basket & Checkout</button>
+              </div>
+            </div>
+            <div class="dropdown-bottom-moreInfo">
+              <div class="moreInfo-item">
+                <ion-icon name="car-outline"></ion-icon>
+                <span>Beauty Insiders enjoy <b>FREE standard shipping</b> on all orders.</span>
+              </div>
+              <div class="moreInfo-item">
+                <ion-icon name="card-outline"></ion-icon>
+                <div>
+                  <b>The AY BEAUTY Credit Card Program</b>
+                  <span>Save $10.00 on this order when you open and use either AY BEAUTY Credit Card today</span>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-navigation">
+        <div class="showHide-nav"><ion-icon name="menu-outline"></ion-icon></div>
+        <nav class="header-nav">
+          <ul class="header-nav-list" data-header-nav-list>
+            <template data-header-nav-list-template>
+              <li class="header-nav-item" data-header-nav-item data-id>
+                <a href="#" data-header-nav-item-aLink data-id></a>
+              </li>
+            </template>
+          </ul>
+        </nav>
+        <div class="nav-flyout-menu" data-nav-flyout-menu>
+          <template data-nav-flyout-item-template>
+            <div class="nav-flyout-item" data-nav-flyout-item data-id>
+              <div class="nav-flyout-item-header" data-nav-flyout-item-header>
+                <a href="#" class="nav-flyout-item-header-link" data-nav-flyout-item-header-link></a>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </div>
+              <div class="nav-flyout-item-links" data-nav-flyout-item-links>
+                <a href="#" class="nav-flyout-item-link" data-nav-flyout-item-link></a>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </header>
+    <div class="productsLayout">
+      <div class="products-header">
+        <div class="products-header-steps"></div>
+      </div>
+      <aside class="aside">
+        <div class="aside-blocker"></div>
+        <div class="aside-header">
+          <div class="aside-header-text"></div>
+        </div>
+        <div class="aside-nav">
+          <ul class="aside-nav-list" data-aside-nav-list>
+            <template data-aside-nav-item-template>
+              <li class="aside-nav-item"><a href="#" data-aside-nav-item-aLink></a></li>
+            </template>
+          </ul>
+        </div>
+        <div class="aside-clear-filters">
+          <button class="aside-clear-filters-btn">Clear filters</button>
+        </div>
+        <div class="aside-filter">
+          <div class="aside-filter-content" data-group="extra">
+            <div class="aside-filter-content-header">
+              <div class="before"></div>
+              <span>Extra</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <div class="aside-filter-content-dropdown block">
+              <fieldset>
+                <div class="aside-filter-content-dropdown-item extra" data-filter-value-id="new-arrivals">
+                  <input type="radio" id="newArrivals" name="extra">
+                  <label for="newArrivals">New Arrivals</label>
+                </div>
+                <div class="aside-filter-content-dropdown-item extra" data-filter-value-id="bestsellers">
+                  <input type="radio" id="bestsellers" name="extra">
+                  <label for="bestsellers">Bestsellers</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="aside-filter-content" data-group="brands">
+            <div class="aside-filter-content-header">
+              <div class="before"></div>
+              <span>Brands</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <div class="aside-filter-content-dropdown">
+              <input type="search" id="search" placeholder="Search for brands" class="aside-filter-content-dropdown-input brands-input">
+              <fieldset data-aside-brands-fieldset>
+              </fieldset>
+            </div>
+          </div>
+          <template data-aside-filter-content-template>
+            <div class="aside-filter-content" data-group="filters">
+              <div class="aside-filter-content-header" data-filter-type-id>
+                <div class="before"></div>
+                <span data-aside-filter-content-header-name></span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </div>
+              <div class="aside-filter-content-dropdown">
+                <fieldset data-aside-filter-fieldset>
+                </fieldset>
+              </div>
+            </div>
+          </template>
+        </div>
+      </aside>
+      <main class="main__products">
+        <div class="main__products-preHeader">
+          <span class="main__products-preHeader-span">Bestsellers</span>
+          <button class="main__products-preHeader-btn main__products-preHeader-btn-prev btn"><ion-icon name="chevron-back-outline"></ion-icon></button>
+          <button class="main__products-preHeader-btn main__products-preHeader-btn-next btn"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+          <div class="main__products-preHeader-container"  data-preHeader-container>
+            <template data-preHeader-item-template>
+              <div class="main__products-preHeader-item">
+                <div class="main__products-preHeader-item-image">
+                  <img src="" alt="" data-preHeader-item-image>
+                </div>
+                <div class="main__products-preHeader-item-info">
+                  <span class="main__products-preHeader-item-info-name" data-preHeader-item-name></span>
+                </div>
+                <div class="main__products-preHeader-item-upperItem">
+                  <div class="product-item">
+                    <a href="#">
+                    <div class="product-item-header">
+                      ID: <span class="product-item-header-id" data-preHeader-item-upperItem-id></span>
+                    </div>
+                    <div class="product-item-image">
+                      <img src="" alt="" data-preHeader-item-upperItem-image/>
+                    </div>
+        
+                    <div class="product-item-info">
+                      <span class="product-item-info-promo-na">New Arrivals</span>
+                      <span class="product-item-info-promo-bs">Bestsellers</span>
+                      <div class="product-item-info-header">
+                        <span class="name" data-preHeader-item-upperItem-name></span>
+                        <div class="product-item-info-header-capacity">
+                          <ion-icon name="water-outline"></ion-icon
+                          ><span class="capacity" data-preHeader-item-upperItem-capacity></span>
+                        </div>
+                      </div>
+                      <div class="product-item-info-middle">
+                        <div class="product-item-info-middle-rating">
+                          <ion-icon name="star-half-outline"></ion-icon>
+                          <span class="rating" data-preHeader-item-upperItem-rating></span>
+                          <span class="revies-count" data-preHeader-item-upperItem-revies></span>
+                        </div>
+                        <div class="product-item-info-middle-price">
+                          <span class="current-price" data-preHeader-item-upperItem-price>$75.90</span>
+                          <span class="original-price"><sup data-preHeader-item-upperItem-originalPrice></sup></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-item-footer">
+                      <button class="btn product-item-footer-basket-button"><p>add to basket</p></button>
+                      <button class="btn product-item-footer-wishlist-button">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </button>
+                    </div>
+                    </a>
+                    </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+        <div class="main__products-header">
+          <span class="main__products-header-itemCount">Loading items...</span>
+          <div class="main__products-header-sort">
+
+            <div class="main__products-header-sort-currentSort">Sort by: <span class="main__products-header-sort-currentSort-span">Sales</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            
+            <div class="main__products-header-sort-dropdown">
+              <div class="main__products-header-sort-dropdown-item" data-sort="relevance">Relevance</div>
+              <div class="main__products-header-sort-dropdown-item" data-sort="sales">Sales</div>
+              <div class="main__products-header-sort-dropdown-item" data-sort="published_at">Published at</div>
+              <div class="main__products-header-sort-dropdown-item" data-sort="rating">Rating</div>
+              <div class="main__products-header-sort-dropdown-item" data-sort="price">Price : low to high</div>
+              <div class="main__products-header-sort-dropdown-item" data-sort="-price">Price: high to low</div>
+            </div>
+          </div>
+        </div>
+        <div class="main__products-container" data-products-container>
+          <div class="main__products-alert">No Items found</div>
+          <template data-product-item-template>
+            <div class="product-item not-upper" data-product-item>
+            <a href="#">
+            <div class="product-item-header">
+              ID: <span class="product-item-header-id" data-product-item-id></span>
+            </div>
+            <div class="product-item-image">
+              <img src="" alt="" data-product-item-image />
+            </div>
+
+            <div class="product-item-info">
+              <span class="product-item-info-promo-na">New Arrival</span>
+              <div class="product-item-info-header">
+                <span class="name" data-product-item-name></span>
+                <div class="product-item-info-header-capacity">
+                  <ion-icon name="water-outline"></ion-icon
+                  ><span class="capacity" data-product-item-capacity></span>
+                </div>
+              </div>
+              <div class="product-item-info-middle">
+                <div class="product-item-info-middle-rating">
+                  <ion-icon name="star-half-outline"></ion-icon>
+                  <span class="rating" data-product-item-rating></span>
+                  <span class="revies-count" data-product-revies></span>
+                </div>
+                <div class="product-item-info-middle-price">
+                  <span class="current-price" data-product-item-price></span>
+                  <span class="original-price"><sup data-product-item-originalPrice></sup></span>
+                </div>
+              </div>
+            </div>
+            <div class="product-item-footer">
+              <button class="btn product-item-footer-basket-button"><p>add to basket</p></button>
+              <button class="btn product-item-footer-wishlist-button">
+                <ion-icon name="heart-outline"></ion-icon>
+              </button>
+            </div>
+            </a>
+            </div>
+          </template>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="footer-links-container">
+        <ul class="footer-links-list">
+          <li class="footer-links-heading">CUSTOMER SERVICE</li>
+        </br>
+          <li class="footer-links-link"><a href="#">FAQ - Frequently Asked Questions</a></li>
+          <li class="footer-links-link"><a href="#">Returns and complaints</a></li>
+          <li class="footer-links-link"><a href="#">Delivery</a></li>
+          <li class="footer-links-link"><a href="#">Payment methods</a></li>
+          <li class="footer-links-link"><a href="#">Contact</a></li>
+        </ul>
+        <ul class="footer-links-list">
+          <li class="footer-links-heading">PURCHASES AND PROMOTIONS</li>
+        </br>
+          <li class="footer-links-link"><a href="#">Promotional offers</a></li>
+          <li class="footer-links-link"><a href="#">AY BEAUTY Club</a></li>
+          <li class="footer-links-link"><a href="#">Brands excluded from promotions Contests</a></li>
+        </ul>
+        <ul class="footer-links-list">
+          <li class="footer-links-heading">RULES</li>
+        </br>
+          <li class="footer-links-link"><a href="#">General conditions of use of ay-beauty.com</a></li>
+          <li class="footer-links-link"><a href="#">General Terms and Conditions of Sales</a></li>
+          <li class="footer-links-link"><a href="#">Privacy & Cookies Policy</a></li>
+          <li class="footer-links-link"><a href="#">Cookie settings</a></li>
+          <li class="footer-links-link"><a href="#">Online consultation</a></li>
+          <li class="footer-links-link"><a href="#">All terms and conditions</a></li>
+        </ul>
+        <ul class="footer-links-list">
+          <li class="footer-links-heading">About AY BEAUTY</li>
+        </br>
+          <li class="footer-links-link"><a href="#">About AY BEAUTY</a></li>
+          <li class="footer-links-link"><a href="#">Our commitment</a></li>
+          <li class="footer-links-link"><a href="#">Our vision of beauty</a></li>
+          <li class="footer-links-link"><a href="#">Career</a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright-social">
+        <p class="footer-copyright">Copyright 2023 &copy; AY BEAUTY</p>
+        <ul class="footer-social-links">
+          <li class="footer-social-link"><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li class="footer-social-link"><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li class="footer-social-link"><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        </ul>
+      </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+
+@import "components/btn";
+@import "components/product";
+@import "components/loader";
+@import "components/skeletonSearch";
+@import "components/skeletonNavigation";
+@import "components/skeletonNavAside";
+@import "components/skeletonProduct";
+@import "components/skeletonPreHeader";
+@import "components/skeletonFilter";
+
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/banner";
+@import "layout/homepageProductSection";
+@import "layout/search";
+@import "layout/footer";
+@import "layout/aside";
+@import "layout/productsMain";
+@import "layout/productsHeader";
+@import "layout/productsContainer";
+@import "layout/currentProduct";
+@import "layout/mini-banners";
+
+@import "pages/home";
+@import "pages/products";
+@import "pages/basket";
